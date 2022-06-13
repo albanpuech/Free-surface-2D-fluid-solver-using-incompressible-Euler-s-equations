@@ -1,9 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <vector>
-
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
-
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include <string>
@@ -471,7 +469,7 @@ int main()
         // compute diagram
         std::vector<Polygon> cells = get_diagram_fluid(&particles[0], &w[0], N + 1);
         // save frame
-        save_frame(cells, "zzframe_", t);
+        save_frame(cells, "frame_", t);
         // move points
         for (int i = 0; i < particles.size(); ++i)
         {
